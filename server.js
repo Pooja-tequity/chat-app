@@ -2,8 +2,9 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
+require('dotenv').config();
 
-const PORT = 4000;
+const PORT = process.env.PORT
 const clients = new Set();
 
 function sendText(socket, str) {
@@ -237,7 +238,4 @@ server.on('upgrade', (req, socket) => {
         clients.delete(socket);
         broadcastClientList();
     });
-});
-
-server.listen(PORT, () => {
 });
