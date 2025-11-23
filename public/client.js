@@ -34,8 +34,10 @@
 
         function getTimestamp() {
             const now = new Date();
+            // const date = now.toLocaleDateString();
             const hours = String(now.getHours()).padStart(2, '0');
             const minutes = String(now.getMinutes()).padStart(2, '0');
+            // return `${date} - ${hours}:${minutes}`;
             return `${hours}:${minutes}`;
         }
 
@@ -99,7 +101,7 @@
                 if (myIdEl) {
                     myIdEl.textContent = myId;
                 }
-                append(`Your ID: ${myId}`, "system");
+                // append(`Your ID: ${myId}`, "system");
                 return;
             }
 
