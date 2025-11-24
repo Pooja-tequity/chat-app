@@ -114,12 +114,12 @@
                 if (data.isPrivate) {
                     if (data.isSent) {
                         if (data.delivered === false) {
-                            append(`You (to ${data.to}): ${data.msg} [User not found]`, "you");
+                            append(`to ${data.to}: ${data.msg} [User not found]`, "you");
                         } else {
-                            append(`You (to ${data.to}): ${data.msg}`, "you");
+                            append(`to ${data.to}: ${data.msg}`, "you");
                         }
                     } else {
-                        append(`DM from ${data.from}: ${data.msg}`, "private");
+                        append(`${data.from}: ${data.msg}`, "private");
                     }
                 } else {
                     if (myId && data.from === myId) {
