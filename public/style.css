@@ -1,7 +1,7 @@
+/* public/style.css */
 * {
   box-sizing: border-box;
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 body {
   margin: 0;
@@ -55,7 +55,6 @@ main {
   word-wrap: break-word;
   clear: both;
 }
-.msg.me,
 .msg.you {
   background: #dbeafe;
   align-self: flex-end;
@@ -87,6 +86,28 @@ main {
   flex: 1;
   min-width: 200px;
 }
+.username-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.username-form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e6eef7;
+  font-size: 14px;
+}
+.username-form button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #10b981;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
 .composer {
   display: flex;
   margin-top: 12px;
@@ -113,92 +134,73 @@ main {
   font-size: 14px;
   -webkit-tap-highlight-color: transparent;
 }
-
 .composer button:active {
   background: #1d4ed8;
 }
-
 @media (max-width: 768px) {
   .app {
     margin: 0;
     border-radius: 0;
     height: 100vh;
   }
-  
   header {
     padding: 12px 16px;
   }
-  
   h1 {
     font-size: 16px;
   }
-  
   header p {
     font-size: 14px;
     margin: 4px 0 0 0;
   }
-  
   main {
     padding: 12px;
   }
-  
   .chat {
     padding: 6px;
   }
-  
   .msg {
     max-width: 85%;
     padding: 6px 10px;
     font-size: 14px;
   }
-  
   .composer {
     flex-direction: column;
     gap: 8px;
   }
-  
   .user-select {
     width: 100%;
     min-width: 100%;
   }
-  
   .composer input {
     width: 100%;
     min-width: 100%;
   }
-  
   .composer button {
     width: 100%;
   }
 }
-
 @media (max-width: 480px) {
   header {
     padding: 10px 12px;
   }
-  
   h1 {
     font-size: 15px;
   }
-  
   header p {
     font-size: 13px;
   }
-  
   main {
     padding: 10px;
   }
-  
   .msg {
     max-width: 90%;
     padding: 6px 8px;
     font-size: 13px;
   }
-  
   .timestamp {
     font-size: 0.8em;
   }
-  
   .composer input,
   .user-select,
   .composer button {
